@@ -23,8 +23,8 @@ class TodoListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
-        loadItems()
+//        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+//        loadItems()
     }
 
     // MARK: - TableView Datasource Methods
@@ -84,7 +84,7 @@ class TodoListViewController: UITableViewController {
     
     fileprivate func saveItems() {
         do{
-            try self.context.save()
+            try context.save()
         } catch{
             print("Error saving context \(error)")
         }
